@@ -1,0 +1,793 @@
+﻿@{
+    ViewData["Title"] = "Creative Studio - NR DESIGNS";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="hero" class="relative min-h-[90vh] flex items-center justify-center pt-20 pb-10 overflow-hidden">
+
+    <video autoplay muted loop playsinline preload="auto" id="smoketwo-video"
+        class="absolute top-0 left-0 w-full h-full object-cover opacity-50 pointer-events-none z-0">
+        <source src="/assets/SmokeCinematic.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+
+    <div class="container mx-auto px-6 text-center z-10 relative">
+        <p class="text-lg md:text-xl uppercase tracking-[0.3em] mb-4 text-subtle-text">
+            Creative Studio / Durban, SA
+        </p>
+        <h1 class="text-5xl sm:text-7xl md:text-8xl lg:text-[10rem] font-extrabold leading-none">
+            <span class="text-blue-accent block">INNOVATIVE</span>
+            <span class="text-neutral-text block mt-2 md:mt-4">IMPACTFUL</span>
+            <span class="text-subtle-text text-3xl md:text-4xl lg:text-5xl mt-8 block">
+                GRAPHIC DESIGN.
+            </span>
+        </h1>
+        <a href="#portfolio"            
+            class="mt-12 inline-block btn-blue px-8 py-3 rounded-full text-sm uppercase tracking-widest font-semibold">
+            Explore Work
+        </a>
+    </div>
+</section>
+
+<section id="about" class="py-24 bg-[var(--color-dark-surface)] border-t border-b border-[#0B1A2C]">
+    <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-3 gap-12 items-start">
+            <div class="lg:col-span-2">
+                <p class="text-lg uppercase tracking-widest text-blue-accent mb-3">01 / Introduction</p>
+                <h2 class="text-4xl md:text-5xl text-neutral-text mb-8">
+                    Where Vision Becomes <span class="text-blue-accent italic">Visual</span>.
+                </h2>
+                <div class="space-y-6 text-subtle-text text-lg leading-relaxed">
+                    <p>
+                        NR DESIGNS, founded and owned by <strong>Nishkar Ramdeyal</strong>, is a Durban-based
+                        creative studio specializing in high-impact graphic design solutions. We believe that
+                        exceptional design is built on a foundation of deep collaboration and client-centric focus.
+                    </p>
+                    <p>
+                        From initial branding strategies and custom graphics to full creative campaigns, we transform
+                        your abstract ideas into designs that truly connect and inspire. Our goal is to ensure every
+                        piece of
+                        work authentically represents your brand identity and leaves a lasting, positive impression.
+                    </p>
+                    <a href="#contact"
+                        class="inline-block text-blue-accent hover:text-blue-hover font-semibold mt-4 border-b border-blue-accent hover:border-blue-hover transition duration-300">
+                        Start a Project Today &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <div class="lg:col-span-1 flex flex-col items-center pt-10 lg:pt-0">
+                <div
+                    class="w-full max-w-sm aspect-square bg-gray-900 border border-[#1A2E44] p-1 rounded-xl shadow-2xl relative overflow-hidden">
+                    <img src="https://placehold.co/600x600/0B1A2C/AAB9CC?text=PROFILE+PHOTO"
+                        alt="Nishkar Ramdeyal Profile Placeholder"
+                        class="w-full h-full object-cover rounded-lg opacity-80" />
+                    <div
+                        class="absolute inset-2 border-2 border-dashed border-[#1A2E44] rounded-lg pointer-events-none">
+                    </div>
+                </div>
+                <div class="mt-8 text-center w-full max-w-sm">
+                    <p class="text-2xl font-bold uppercase tracking-wider text-blue-accent mt-0">
+                        Nishkar Ramdeyal
+                    </p>
+                    <p class="text-xs uppercase tracking-[0.4em] text-neutral-text mt-1">
+                        Founder & Creative Director
+                    </p>
+                    <p class="text-subtle-text italic mt-4">
+                        "Where vision becomes visual"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="py-24">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <p class="text-lg uppercase tracking-widest text-blue-accent mb-3">02 / Capabilities</p>
+            <h2 class="text-4xl md:text-5xl text-neutral-text">Core Services Offered</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+                class="project-card group p-6 border border-[#1A2E44] rounded-xl bg-[var(--color-dark-surface)] hover:border-blue-accent transition duration-500 ease-in-out">
+                <div class="image-carousel relative w-full aspect-square mb-6 rounded-lg overflow-hidden bg-black/20">
+                    <button
+                        class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 z-20 p-2 bg-black/50 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-blue-accent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m15 18-6-6 6-6" />
+                        </svg>
+                    </button>
+                    <button
+                        class="next-btn absolute right-2 top-1/2 -translate-y-1/2 z-20 p-2 bg-black/50 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-blue-accent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m9 18 6-6-6-6" />
+                        </svg>
+                    </button>
+                    <img src="/assets/capabilities/CLEANFIX WOOD ENTERPRISE.jpg" alt="Branding Image 1"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 opacity-100 p-2">
+                    <img src="/assets/capabilities/FOR CHRIST SAKE LOGO.png" alt="Branding Image 2"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 opacity-0 p-2">
+                    <img src="/assets/capabilities/K'S KITCHEN SA - ROOM MOCK UP.jpg" alt="Branding Image 3"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 opacity-0 p-2">
+                    <img src="/assets/capabilities/TEN BURY BEACH APARTMENTS - MOCK UP 2.png" alt="Branding Image 4"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 opacity-0 p-2">
+                </div>
+                <div class="flex items-center mb-3">
+                    <span class="text-blue-accent text-3xl mr-3 leading-none">&bull;</span>
+                    <h3 class="text-2xl font-semibold text-neutral-text leading-tight">Business Branding</h3>
+                </div>
+                <p class="text-subtle-text">Complete corporate identity packages, including logo design, style guides,
+                    and brand strategy development.</p>
+            </div>
+
+            <div
+                class="project-card group p-6 border border-[#1A2E44] rounded-xl bg-[var(--color-dark-surface)] hover:border-blue-accent transition duration-500 ease-in-out">
+                <div class="image-carousel relative w-full aspect-square mb-6 rounded-lg overflow-hidden bg-black/20">
+                    <button
+                        class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 z-20 p-2 bg-black/50 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-blue-accent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m15 18-6-6 6-6" />
+                        </svg>
+                    </button>
+                    <button
+                        class="next-btn absolute right-2 top-1/2 -translate-y-1/2 z-20 p-2 bg-black/50 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-blue-accent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m9 18 6-6-6-6" />
+                        </svg>
+                    </button>
+                    <img src="/assets/capabilities/BLUE DROP PURIFIED FLYER MOCK UP.png" alt="Digital Print Image 1"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 opacity-100 p-2">
+                    <img src="/assets/capabilities/SARIEKA SOOKLAL OZONE THERAPIST PAMPHLETS.png"
+                        alt="Digital Print Image 2"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 opacity-0 p-2">
+                    <img src="/assets/capabilities/SARIEKA SOOKLAL REFLEXOLOGY.jpg" alt="Digital Print Image 3"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 opacity-0 p-2">
+                    <img src="/assets/capabilities/TASTY PASTRY 3.png" alt="Digital Print Image 4"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 opacity-0 p-2">
+                    <img src="/assets/capabilities/TASTY PASTRY MOCK UP 3.png" alt="Digital Print Image 5"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 opacity-0 p-2">
+                    <img src="/assets/capabilities/BABY SHOWER CARD.jpg" alt="Digital Print Image 6"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 opacity-0 p-2">
+                    <img src="/assets/capabilities/CHIAMAKA.jpg" alt="Digital Print Image 7"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 opacity-0 p-2">
+                    <img src="/assets/capabilities/CLEANFIX WOOD ENTERPRISE BUSINESS CARD.jpg"
+                        alt="Digital Print Image 8"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 opacity-0 p-2">
+                    <img src="/assets/capabilities/DESI DYNAMICS.jpg" alt="Digital Print Image 9"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 opacity-0 p-2">
+                    <img src="/assets/capabilities/DYNAMIC DESIGN.jpg" alt="Digital Print Image 10"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 opacity-0 p-2">
+                    <img src="/assets/capabilities/MIKASA.jpg" alt="Digital Print Image 11"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 opacity-0 p-2">
+                    <img src="/assets/capabilities/PRAVERN TRADING.png" alt="Digital Print Image 12"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 opacity-0 p-2">
+                    <img src="/assets/capabilities/RS DESIGN.jpg" alt="Digital Print Image 13"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 opacity-0 p-2">
+                    <img src="/assets/capabilities/SADISHA'S MEHNDI.jpg" alt="Digital Print Image 14"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 opacity-0 p-2">
+                    <img src="/assets/capabilities/SARIEKA SOOKLAL OZONE THERAPIST.jpg" alt="Digital Print Image 15"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 opacity-0 p-2">
+                </div>
+                <div class="flex items-center mb-3">
+                    <span class="text-blue-accent text-3xl mr-3 leading-none">&bull;</span>
+                    <h3 class="text-2xl font-semibold text-neutral-text leading-tight">Digital & Print Media</h3>
+                </div>
+                <p class="text-subtle-text">Design for flyers, brochures, banners, custom business cards, and email
+                    signatures. Full digital invite design.</p>
+            </div>
+
+            <div
+                class="project-card group p-6 border border-[#1A2E44] rounded-xl bg-[var(--color-dark-surface)] hover:border-blue-accent transition duration-500 ease-in-out">
+                <div class="image-carousel relative w-full aspect-square mb-6 rounded-lg overflow-hidden bg-black/20">
+                    <button
+                        class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 z-20 p-2 bg-black/50 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-blue-accent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m15 18-6-6 6-6" />
+                        </svg>
+                    </button>
+                    <button
+                        class="next-btn absolute right-2 top-1/2 -translate-y-1/2 z-20 p-2 bg-black/50 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-blue-accent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m9 18 6-6-6-6" />
+                        </svg>
+                    </button>
+
+                    <img src="https://placehold.co/400x400/1A2E44/AAB9CC?text=Resume+Template" alt="Collateral Image 1"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 opacity-100 p-2">
+                    <img src="https://placehold.co/400x400/0B1A2C/50C4F6?text=Presentation+Slide"
+                        alt="Collateral Image 2"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 opacity-0 p-2">
+                </div>
+                <div class="flex items-center mb-3">
+                    <span class="text-blue-accent text-3xl mr-3 leading-none">&bull;</span>
+                    <h3 class="text-2xl font-semibold text-neutral-text leading-tight">Custom Collateral</h3>
+                </div>
+                <p class="text-subtle-text">Resumes, MS Office templates (Letterhead, Invoice), T-Shirt designs, and
+                    engaging PowerPoint Presentations.</p>
+            </div>
+
+            <div
+                class="project-card group p-6 border border-[#1A2E44] rounded-xl bg-[var(--color-dark-surface)] hover:border-blue-accent transition duration-500 ease-in-out">
+                <div class="image-carousel relative w-full aspect-square mb-6 rounded-lg overflow-hidden bg-black/20">
+                    <button
+                        class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 z-20 p-2 bg-black/50 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-blue-accent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m15 18-6-6 6-6" />
+                        </svg>
+                    </button>
+                    <button
+                        class="next-btn absolute right-2 top-1/2 -translate-y-1/2 z-20 p-2 bg-black/50 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-blue-accent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m9 18 6-6-6-6" />
+                        </svg>
+                    </button>
+
+                    <img src="/assets/capabilities/SARIEKA SOOKLAL - CANNABIS SOAP AND GEL MOCK UP 1.png"
+                        alt="Prop Design Image 1"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 opacity-100 p-2">
+                    <img src="/assets/capabilities/ATCHARYA SPICE WATER.jpg" alt="Prop Design Image 2"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 opacity-0 p-2">
+                </div>
+                <div class="flex items-center mb-3">
+                    <span class="text-blue-accent text-3xl mr-3 leading-none">&bull;</span>
+                    <h3 class="text-2xl font-semibold text-neutral-text leading-tight">Prop & Set Design</h3>
+                </div>
+                <p class="text-subtle-text">Specialized prop and set design for film and television, bringing stories to
+                    life on screen.</p>
+            </div>
+
+            <div
+                class="project-card group p-6 border border-[#1A2E44] rounded-xl bg-[var(--color-dark-surface)] hover:border-blue-accent transition duration-500 ease-in-out">
+                <div class="image-carousel relative w-full aspect-square mb-6 rounded-lg overflow-hidden bg-black/20">
+                    <button
+                        class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 z-20 p-2 bg-black/50 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-blue-accent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m15 18-6-6 6-6" />
+                        </svg>
+                    </button>
+                    <button
+                        class="next-btn absolute right-2 top-1/2 -translate-y-1/2 z-20 p-2 bg-black/50 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-blue-accent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m9 18 6-6-6-6" />
+                        </svg>
+                    </button>
+
+                    <img src="/assets/capabilities/GENTLE GIANT - INSTAGRAM.png" alt="Social Media Image 1"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 opacity-100 p-2">
+                </div>
+                <div class="flex items-center mb-3">
+                    <span class="text-blue-accent text-3xl mr-3 leading-none">&bull;</span>
+                    <h3 class="text-2xl font-semibold text-neutral-text leading-tight">Social Media & Video</h3>
+                </div>
+                <p class="text-subtle-text">Social Media Marketing, GMB Setup & Optimisation, and professional Company
+                    Video Advertisements.</p>
+            </div>
+
+            <div
+                class="project-card group p-6 border border-[#1A2E44] rounded-xl bg-[var(--color-dark-surface)] hover:border-blue-accent transition duration-500 ease-in-out">
+                <div class="image-carousel relative w-full aspect-square mb-6 rounded-lg overflow-hidden bg-black/20">
+                    <button
+                        class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 z-20 p-2 bg-black/50 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-blue-accent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m15 18-6-6 6-6" />
+                        </svg>
+                    </button>
+                    <button
+                        class="next-btn absolute right-2 top-1/2 -translate-y-1/2 z-20 p-2 bg-black/50 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-blue-accent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m9 18 6-6-6-6" />
+                        </svg>
+                    </button>
+
+                    <img src="https://placehold.co/400x400/1A2E44/AAB9CC?text=Photo+Collage+Example"
+                        alt="Photo Editing Image 1"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 opacity-100 p-2">
+                    <img src="https://placehold.co/400x400/0B1A2C/50C4F6?text=Before%2FAfter+Retouch"
+                        alt="Photo Editing Image 2"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 opacity-0 p-2">
+                </div>
+                <div class="flex items-center mb-3">
+                    <span class="text-blue-accent text-3xl mr-3 leading-none">&bull;</span>
+                    <h3 class="text-2xl font-semibold text-neutral-text leading-tight">Photo & Image Editing</h3>
+                </div>
+                <p class="text-subtle-text">Expert photo collages, photo editing, and other creative image manipulation
+                    services.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="portfolio" class="py-24 bg-[var(--color-dark-surface)] border-t border-[#0B1A2C]">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <p class="text-lg uppercase tracking-widest text-blue-accent mb-3">03 / Selected Works</p>
+            <h2 class="text-4xl md:text-5xl text-neutral-text">
+                A Glimpse of the <span class="italic">Impact</span>
+            </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+
+            <div class="project-card group rounded-xl border border-white/10 overflow-hidden">
+
+                <div class="image-carousel relative overflow-hidden aspect-square bg-black/20">
+                    <button
+                        class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 z-20 p-2 bg-black/50 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-blue-accent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m15 18-6-6 6-6" />
+                        </svg>
+                    </button>
+                    <button
+                        class="next-btn absolute right-2 top-1/2 -translate-y-1/2 z-20 p-2 bg-black/50 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-blue-accent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m9 18 6-6-6-6" />
+                        </svg>
+                    </button>
+                    <img src="/assets/selected/MUVHANGO.jpg" alt="Muvhango 1"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-700 opacity-100 p-2">
+                    <img src="/assets/selected/MUVHANGO TWO.png" alt="Muvhango 2"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-700 opacity-0 p-2">
+                    <img src="/assets/selected/MUVHANGO FLAVOURS OF MZANZI FRONT COVER MOCK UP.png" alt="Muvhango 3"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-700 opacity-0 p-2">
+                    <img src="/assets/selected/MUVHANGO FLAVOURS OF MZANZI BACK COVER MOCK UP.png" alt="Muvhango 4"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-700 opacity-0 p-2">
+                    <img src="/assets/selected/MUVHANGO CHIAWELO FAITH CHURCH BANNER MOCK UP.jpg" alt="Muvhango 5"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-700 opacity-0 p-2">
+                    <img src="/assets/selected/MUVHANGO CHIAWELO FAITH CHURCH BANNER MOCK UP 2.jpg" alt="Muvhango 6"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-700 opacity-0 p-2">
+                    <img src="/assets/selected/MUVHANGO GLOW FAIR.png" alt="Muvhango 7"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-700 opacity-0 p-2">
+                    <img src="/assets/selected/MUVHANGO GLOWFAIR BILLBOARD DESIGN MOCK UP 1.png" alt="Muvhango 8"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-700 opacity-0 p-2">
+                    <img src="/assets/selected/MUVHANGO HER CHOICE THREE.png" alt="Muvhango 9"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-700 opacity-0 p-2">
+                    <img src="/assets/selected/MUVHANGO HER CHOICE FOUR.png" alt="Muvhango 10"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-700 opacity-0 p-2">
+                    <img src="/assets/selected/MUVHANGO HER CHOICE BOX MOCK UP copy.jpg" alt="Muvhango 11"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-700 opacity-0 p-2">
+                    <img src="/assets/selected/MUVHANGO HER CHOICE.jpg" alt="Muvhango 12"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-700 opacity-0 p-2">
+                    <img src="/assets/selected/MUVHANGO INTIMATE.jpg" alt="Muvhango 13"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-700 opacity-0 p-2">
+                    <img src="/assets/selected/MUVHANGO INTIMATE TWO.png" alt="Muvhango 14"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-700 opacity-0 p-2">
+                    <img src="/assets/selected/MUVHANGO INTERNET CAFE.png" alt="Muvhango 15"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-700 opacity-0 p-2">
+                </div>
+                <div class="p-6">
+                    <span class="text-xs uppercase tracking-widest text-subtle-text">Prop Design / Television</span>
+                    <h3 class="text-3xl text-blue-accent mt-1">MUVHANGO</h3>
+                    <p class="text-subtle-text mt-2">Custom-designed props and graphics to bring narrative stories to
+                        life.</p>
+                </div>
+            </div>
+
+            <div class="project-card group rounded-xl border border-white/10 overflow-hidden">
+                <div class="image-carousel relative overflow-hidden aspect-square bg-black/20">
+                    <button
+                        class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 z-20 p-2 bg-black/50 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-blue-accent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m15 18-6-6 6-6" />
+                        </svg>
+                    </button>
+                    <button
+                        class="next-btn absolute right-2 top-1/2 -translate-y-1/2 z-20 p-2 bg-black/50 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-blue-accent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m9 18 6-6-6-6" />
+                        </svg>
+                    </button>
+                    <img src="/assets/selected/SPEARX.jpg" alt="Spear 1"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-700 opacity-100 p-2">
+                    <img src="/assets/selected/SPEARXTWO.png" alt="Spear 2"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-700 opacity-0 p-2">
+                </div>
+                <div class="p-6">
+                    <span class="text-xs uppercase tracking-widest text-subtle-text">Packaging / Product</span>
+                    <h3 class="text-3xl text-blue-accent mt-1">GAMING CONSOLE</h3>
+                    <p class="text-subtle-text mt-2">Eye-catching retail box design blending vibrant digital aesthetics.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-card group rounded-xl border border-white/10 overflow-hidden">
+                <div class="image-carousel relative overflow-hidden aspect-square bg-black/20">
+                    <button
+                        class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 z-20 p-2 bg-black/50 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-blue-accent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m15 18-6-6 6-6" />
+                        </svg>
+                    </button>
+                    <button
+                        class="next-btn absolute right-2 top-1/2 -translate-y-1/2 z-20 p-2 bg-black/50 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-blue-accent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m9 18 6-6-6-6" />
+                        </svg>
+                    </button>
+                    <img src="/assets/selected/MUVHANGO 360 FIT BUILDING MOCK UP.png" alt="360 Fit 1"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-700 opacity-100 p-2">
+                    <img src="/assets/selected/MUVHANGO 360 BANNER.jpg" alt="360 Fit 2"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-700 opacity-0 p-2">
+                    <img src="/assets/selected/MUVHANGO 360 THREE.png" alt="360 Fit 3"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-700 opacity-0 p-2">
+                    <img src="/assets/selected/MUVHANGO 360 TWO.jpg" alt="360 Fit 4"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-700 opacity-0 p-2">
+                    <img src="/assets/selected/MUVHANGO 360 ONE.jpg" alt="360 Fit 5"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-700 opacity-0 p-2">
+                    <img src="/assets/selected/MUVHANGO 360 FOUR.png" alt="360 Fit 6"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-700 opacity-0 p-2">
+                </div>
+                <div class="p-6">
+                    <span class="text-xs uppercase tracking-widest text-subtle-text">Branding / Signage</span>
+                    <h3 class="text-3xl text-blue-accent mt-1">360 FIT GYM</h3>
+                    <p class="text-subtle-text mt-2">Comprehensive branding including gym signage and apparel.</p>
+                </div>
+            </div>
+
+            <div class="project-card group rounded-xl border border-white/10 overflow-hidden">
+                <div class="image-carousel relative overflow-hidden aspect-square bg-black/20">
+                    <button
+                        class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 z-20 p-2 bg-black/50 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-blue-accent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m15 18-6-6 6-6" />
+                        </svg>
+                    </button>
+                    <button
+                        class="next-btn absolute right-2 top-1/2 -translate-y-1/2 z-20 p-2 bg-black/50 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-blue-accent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m9 18 6-6-6-6" />
+                        </svg>
+                    </button>
+                    <img src="/assets/selected/MUVHANGO WINE BOTTLE MOCK UP 1.png" alt="Wine 1"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-700 opacity-100 p-2">
+                    <img src="/assets/selected/MUVHANGO WINE BOTTLE MOCK UP 2.png" alt="Wine 2"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-700 opacity-0 p-2">
+                    <img src="/assets/selected/MUVHANGO WINE BOTTLE MOCK UP 3.png" alt="Wine 3"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-700 opacity-0 p-2">
+                    <img src="/assets/selected/MUVHANGO WINE BOTTLE MOCK UP 4.png" alt="Wine 4"
+                        class="absolute inset-0 w-full h-full object-contain transition-opacity duration-700 opacity-0 p-2">
+                </div>
+                <div class="p-6">
+                    <span class="text-xs uppercase tracking-widest text-subtle-text">Packaging / FMCG</span>
+                    <h3 class="text-3xl text-blue-accent mt-1">VHUKOVELA WINE</h3>
+                    <p class="text-subtle-text mt-2">Sophisticated label designs for premium beverage products.</p>
+                </div>
+            </div>
+
+            <div class="project-card group rounded-xl border border-white/10 overflow-hidden">
+                <div class="image-carousel relative overflow-hidden aspect-square bg-black/20">
+                    <img src="https://placehold.co/1080x1350/1A2E44/AAB9CC?text=SOCIAL+POST"
+                        class="absolute inset-0 w-full h-full object-contain p-2">
+                </div>
+                <div class="p-6">
+                    <span class="text-xs uppercase tracking-widest text-subtle-text">Marketing / Digital</span>
+                    <h3 class="text-3xl text-blue-accent mt-1">SOCIAL CAMPAIGN</h3>
+                    <p class="text-subtle-text mt-2">Engaging social media designs tailored for high-conversion ads.</p>
+                </div>
+            </div>
+
+            <div class="project-card group rounded-xl border border-white/10 overflow-hidden">
+                <div class="image-carousel relative overflow-hidden aspect-square bg-black/20">
+                    <img src="https://placehold.co/800x600/0B1A2C/50C4F6?text=APP+UI"
+                        class="absolute inset-0 w-full h-full object-contain p-2">
+                </div>
+                <div class="p-6">
+                    <span class="text-xs uppercase tracking-widest text-subtle-text">UI/UX / Mobile</span>
+                    <h3 class="text-3xl text-blue-accent mt-1">MOBILE APP INTERFACE</h3>
+                    <p class="text-subtle-text mt-2">User-centric interface design focusing on dark-mode aesthetics.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="py-24">
+    <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-3 gap-12">
+            <div
+                class="lg:col-span-1 bg-[var(--color-dark-surface)] p-8 rounded-xl border border-[#1A2E44] flex flex-col justify-center">
+                <p class="text-sm uppercase tracking-widest text-blue-accent mb-3">Ready to transform your brand?</p>
+                <h2 class="text-3xl text-neutral-text mb-4">
+                    Let's Build Your <span class="italic">Legacy</span>.
+                </h2>
+                <p class="text-subtle-text mb-6">
+                    We collaborate closely to deliver design solutions that inspire, connect, and make a powerful,
+                    lasting impression.
+                </p>
+                <a href="#contact"
+                    class="inline-block btn-blue px-6 py-3 rounded-full text-sm uppercase tracking-widest font-semibold w-full text-center md:w-auto">
+                    Get in Touch
+                </a>
+            </div>
+
+            <div class="lg:col-span-2 p-8 border border-[#1A2E44] rounded-xl bg-[var(--color-dark-surface)]">
+                <h3 class="text-2xl text-neutral-text mb-8 border-b border-blue-accent pb-2">Trusted By</h3>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 items-center">
+
+                    <div
+                        class="project-card group flex flex-col items-center justify-center p-4 rounded-xl border border-transparent">
+                        <div class="h-18 w-full flex items-center justify-center">
+                            <img src="/assets/trustedby/Muvhango.png" alt="MUVHANGO Logo"
+                                class="max-h-full max-w-full object-contain" />
+                        </div>
+                        <p
+                            class="text-[10px] text-blue-accent mt-3 text-center opacity-80 group-hover:opacity-100 transition-opacity">
+                            Muvhango</p>
+                    </div>
+
+                    <div
+                        class="project-card group flex flex-col items-center justify-center p-4 rounded-xl border border-transparent">
+                        <div class="h-18 w-full flex items-center justify-center">
+                            <img src="/assets/trustedby/AfricaEyewear.png" alt="AFRICA EYEWEAR Logo"
+                                class="max-h-full max-w-full object-contain" />
+                        </div>
+                        <p
+                            class="text-[10px] text-blue-accent mt-3 text-center opacity-80 group-hover:opacity-100 transition-opacity">
+                            Africa Eyewear</p>
+                    </div>
+
+                    <div
+                        class="project-card group flex flex-col items-center justify-center p-4 rounded-xl border border-transparent">
+                        <div class="h-[80px] w-full flex items-center justify-center">
+                            <img src="/assets/trustedby/LuckyLounge.png" alt="LUCKY LOUNGE Logo"
+                                class="max-h-full max-w-full object-contain" />
+                        </div>
+                        <p
+                            class="text-[10px] text-blue-accent mt-3 text-center opacity-80 group-hover:opacity-100 transition-opacity">
+                            Lucky Lounge</p>
+                    </div>
+
+                    <div
+                        class="project-card group flex flex-col items-center justify-center p-4 rounded-xl border border-transparent">
+                        <div class="h-16 w-full flex items-center justify-center">
+                            <img src="/assets/trustedby/SmartAccounting.png" alt="SMART ACCOUNTING Logo"
+                                class="max-h-full max-w-full object-contain" />
+                        </div>
+                        <p
+                            class="text-[10px] text-blue-accent mt-3 text-center opacity-80 group-hover:opacity-100 transition-opacity">
+                            Smart Accounting</p>
+                    </div>
+
+                    <div
+                        class="project-card group flex flex-col items-center justify-center p-4 rounded-xl border border-transparent">
+                        <div class="h-[72px] w-full flex items-center justify-center">
+                            <img src="/assets/trustedby/Sonals.png" alt="Sonals Tuition"
+                                class="max-h-full max-w-full object-contain" />
+                        </div>
+                        <p
+                            class="text-[10px] text-blue-accent mt-3 text-center opacity-80 group-hover:opacity-100 transition-opacity">
+                            Sonals Tuition</p>
+                    </div>
+
+                    <div
+                        class="project-card group flex flex-col items-center justify-center p-4 rounded-xl border border-transparent">
+                        <div class="h-18 w-full flex items-center justify-center">
+                            <img src="/assets/trustedby/MiKasa.png" alt="MIKASA Logo"
+                                class="max-h-full max-w-full object-contain" />
+                        </div>
+                        <p
+                            class="text-[10px] text-blue-accent mt-3 text-center opacity-80 group-hover:opacity-100 transition-opacity">
+                            Mikasa Blinds</p>
+                    </div>
+
+                    <div
+                        class="project-card group flex flex-col items-center justify-center p-4 rounded-xl border border-transparent">
+                        <div class="h-[72px] w-full flex items-center justify-center">
+                            <img src="/assets/trustedby/Edison.png" alt="EDISON POWER Logo"
+                                class="max-h-full max-w-full object-contain" />
+                        </div>
+                        <p
+                            class="text-[10px] text-blue-accent mt-3 text-center opacity-80 group-hover:opacity-100 transition-opacity">
+                            Edison Power</p>
+                    </div>
+
+                    <div
+                        class="project-card group flex flex-col items-center justify-center p-4 rounded-xl border border-transparent">
+                        <div class="h-[72px] w-full flex items-center justify-center">
+                            <img src="/assets/trustedby/Tenbury.png" alt="Tenbury Apartments Logo"
+                                class="max-h-full max-w-full object-contain" />
+                        </div>
+                        <p
+                            class="text-[10px] text-blue-accent mt-3 text-center opacity-80 group-hover:opacity-100 transition-opacity">
+                            Tenbury Apartments</p>
+                    </div>
+
+                    <div
+                        class="project-card group flex flex-col items-center justify-center p-4 rounded-xl border border-transparent">
+                        <div class="h-[72px] w-full flex items-center justify-center">
+                            <img src="/assets/trustedby/KsKitchen.png" alt="K'S KITCHEN Logo"
+                                class="max-h-full max-w-full object-contain" />
+                        </div>
+                        <p
+                            class="text-[10px] text-blue-accent mt-3 text-center opacity-80 group-hover:opacity-100 transition-opacity">
+                            K's Kitchen SA</p>
+                    </div>
+
+                    <div
+                        class="project-card group flex flex-col items-center justify-center p-4 rounded-xl border border-transparent">
+                        <div class="h-[72px] w-full flex items-center justify-center">
+                            <img src="/assets/trustedby/Shoreline.png" alt="Shoreline Dental Logo"
+                                class="max-h-full max-w-full object-contain" />
+                        </div>
+                        <p
+                            class="text-[10px] text-blue-accent mt-3 text-center opacity-80 group-hover:opacity-100 transition-opacity">
+                            Shoreline Dental</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="py-24 bg-[var(--color-dark-surface)] border-t border-[#0B1A2C]">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <p class="text-lg uppercase tracking-widest text-blue-accent mb-3">04 / Connect</p>
+            <h2 class="text-4xl md:text-5xl text-neutral-text">
+                Let's Create Something <span class="italic">Exceptional</span>.
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 mx-auto lg:items-stretch">
+            <div class="order-2 lg:order-1 flex flex-col h-full">
+                <h3 class="text-2xl font-bold text-neutral-text mb-4">Our Location</h3>
+                <p class="text-subtle-text mb-6">
+                    We're based in Durban, South Africa. Feel free to send us a message!
+                </p>
+                <div
+                    class="relative overflow-hidden rounded-xl border border-[#1A2E44] shadow-lg flex-grow h-full min-h-[300px]">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3463.3100358919014!2d30.95779688167575!3d-29.768675431568266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef703d93fb12f83%3A0xf859f6e39c5b3741!2s6%20Wandale%20Pl%2C%20Castle%20Hill%2C%20Newlands%20West%2C%204037!5e0!3m2!1sen!2sza!4v1763928657761!5m2!1sen!2sza"
+                        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        class="absolute top-0 left-0 w-full h-full"></iframe>
+                </div>
+            </div>
+
+            <div class="order-1 lg:order-2">
+                <h3 class="text-2xl font-bold text-neutral-text mb-8">Get In Touch</h3>
+
+                <div class="grid grid-cols-2 gap-8 mb-12 border-b border-t border-[#102030] py-8">
+                    <div class="text-left">
+                        <div class="flex items-center space-x-2 mb-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="bi bi-envelope text-subtle-text" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
+                            </svg>
+                            <p class="text-subtle-text uppercase text-sm tracking-wider">Email</p>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-x-2">
+                            <a href="mailto:nrdesigns05@gmail.com"
+                                class="text-lg text-blue-accent hover:text-blue-hover transition duration-300">
+                                nrdesigns05@gmail.com
+                            </a>
+                            @* <span class="text-neutral-text font-medium">OR</span> *@
+                            <a href="mailto:nishkar@nrdesigns.co.za"
+                                class="text-lg text-blue-accent hover:text-blue-hover transition duration-300">
+                                nishkar@nrdesigns.co.za
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="text-left">
+                        <div class="flex items-center space-x-2 mb-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="bi bi-telephone text-subtle-text" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015L12.71 9.38c-.282-.204-.63-.341-.987-.341-.46 0-.916.124-1.272.378l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                            </svg>
+                            <p class="text-subtle-text uppercase text-sm tracking-wider">Phone</p>
+                        </div>
+                        <a href="tel:+27678701476"
+                            class="text-lg text-blue-accent hover:text-blue-hover transition duration-300">
+                            +27 67 870 1476
+                        </a>
+                    </div>
+
+                    <div class="text-left">
+                        <div class="flex items-center space-x-2 mb-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="bi bi-facebook text-subtle-text" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                            </svg>
+                            <p class="text-subtle-text uppercase text-sm tracking-wider">Facebook</p>
+                        </div>
+                        <a href="https://www.facebook.com/profile.php?id=61555537274206&mibextid=ZbWKwL" target="_blank"
+                            class="text-lg text-blue-accent hover:text-blue-hover transition duration-300">
+                            NR DESIGNS
+                        </a>
+                    </div>
+
+                    <div class="text-left">
+                        <div class="flex items-center space-x-2 mb-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="bi bi-instagram text-subtle-text" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                            </svg>
+                            <p class="text-subtle-text uppercase text-sm tracking-wider">Instagram</p>
+                        </div>
+                        <a href="https://www.instagram.com/nrdesigns05" target="_blank"
+                            class="text-lg text-blue-accent hover:text-blue-hover transition duration-300">
+                            @@nrdesigns05
+                        </a>
+                    </div>
+                </div>
+
+                <form asp-action="SendMessage" method="POST" class="space-y-6 text-left">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-neutral-300 mb-2">Your Name</label>
+                        <input type="text" id="name" name="name" required
+                            class="w-full p-3 rounded-lg bg-[var(--color-dark-bg)] border border-[#1A2E44] text-neutral-text focus:border-blue-accent focus:ring-1 focus:ring-blue-accent transition duration-300"
+                            placeholder="John Doe">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-neutral-300 mb-2">Email Address</label>
+                        <input type="email" id="email" name="email" required
+                            class="w-full p-3 rounded-lg bg-[var(--color-dark-bg)] border border-[#1A2E44] text-neutral-text focus:border-blue-accent focus:ring-1 focus:ring-blue-accent transition duration-300"
+                            placeholder="johndoe1234@gmail.com">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-neutral-300 mb-2">Contact
+                            Number</label>
+                        <input type="tel" id="phone" name="phone" required
+                            class="w-full p-3 rounded-lg bg-[var(--color-dark-bg)] border border-[#1A2E44] text-neutral-text focus:border-blue-accent focus:ring-1 focus:ring-blue-accent transition duration-300"
+                            placeholder="+27 67 870 1476">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-neutral-300 mb-2">What can we help
+                            you with?</label>
+                        <textarea id="message" name="message" rows="4" required
+                            class="w-full p-3 rounded-lg bg-[var(--color-dark-bg)] border border-[#1A2E44] text-neutral-text focus:border-blue-accent focus:ring-1 focus:ring-blue-accent transition duration-300"
+                            placeholder="Tell us about your branding needs, prop design project, etc."></textarea>
+                    </div>
+                    <div class="text-center pt-4">
+                        <button type="submit"
+                            class="btn-blue px-12 py-3 rounded-full text-sm uppercase tracking-widest font-semibold">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<a href="https://wa.me/27678701476" target="_blank" id="whatsapp-float">
+    <div class="whatsapp-glow">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="whatsapp-icon">
+            <path
+                d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+        </svg>
+    </div>
+    <div class="whatsapp-text-content">
+        <span class="whatsapp-text-small">Ready to Create?</span>
+        <span class="whatsapp-text-large">Contact Us</span>
+    </div>
+</a>

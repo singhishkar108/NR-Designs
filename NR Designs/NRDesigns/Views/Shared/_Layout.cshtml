@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NR DESIGNS - Creative Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+
+<body class="antialiased">
+    <header
+        class="sticky top-0 z-50 bg-[var(--color-dark-bg)] bg-opacity-95 backdrop-blur-sm shadow-xl border-b border-[#0B1A2C]">
+        <nav class="container mx-auto px-6 py-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-widest">
+                <img src="/assets/HeaderThree.png" alt="NR DESIGNS Logo" class="h-5 w-auto logo-glow" />
+            </a>
+            <div id="main-nav" class="space-x-8 hidden md:flex text-sm uppercase tracking-wider">
+                <a href="#hero"
+                    class="nav-link-item text-subtle-text hover:text-blue-hover transition duration-300">Home</a>
+                <a href="#about"
+                    class="nav-link-item text-subtle-text hover:text-blue-hover transition duration-300">About</a>
+                <a href="#services"
+                    class="nav-link-item text-subtle-text hover:text-blue-hover transition duration-300">Services</a>
+                <a href="#portfolio"
+                    class="nav-link-item text-subtle-text hover:text-blue-hover transition duration-300">Portfolio</a>
+                <a href="#contact"
+                    class="nav-link-item text-subtle-text hover:text-blue-hover transition duration-300">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <footer class="bg-[var(--color-dark-bg)] border-t border-[#1A2E44]">
+        <div class="container mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center text-sm">
+            <p class="text-subtle-text mb-4 md:mb-0">&copy; 2025 NR DESIGNS. All Rights Reserved.</p>
+            <div class="space-x-6">
+                <a href="#about" class="text-subtle-text hover:text-blue-hover transition">Privacy Policy</a>
+                <a href="#services" class="text-subtle-text hover:text-blue-hover transition">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // =======================================================
+            // 1. Navigation Link Highlighting (Intersection Observer)
+            // =======================================================
+            const ACTIVE_CLASSES = "text-blue-accent border-b-2 border-blue-accent pb-1";
+            const DEFAULT_CLASSES = "text-subtle-text";
+
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link-item');
+            const allSections = [document.getElementById('hero'), ...Array.from(sections).filter(s => s.id !== 'hero')];
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '-50% 0px -50% 0px',
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const currentSectionId = entry.target.id;
+                        navLinks.forEach(link => {
+                            link.classList.remove(...ACTIVE_CLASSES.split(' '));
+                            link.classList.add(...DEFAULT_CLASSES.split(' '));
+                        });
+                        const targetLink = document.querySelector(`a[href="#${currentSectionId}"]`);
+                        if (targetLink) {
+                            targetLink.classList.remove(...DEFAULT_CLASSES.split(' '));
+                            targetLink.classList.add(...ACTIVE_CLASSES.split(' '));
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            allSections.forEach(section => { if (section) observer.observe(section); });
+
+            const homeLink = document.querySelector('a[href="#hero"]');
+            if (homeLink) {
+                homeLink.classList.remove(...DEFAULT_CLASSES.split(' '));
+                homeLink.classList.add(...ACTIVE_CLASSES.split(' '));
+            }
+
+            // =======================================================
+            // 2. Image Carousel Fade Animation, Manual Nav & Swipe
+            // =======================================================
+            const carousels = document.querySelectorAll('.image-carousel');
+            const intervalTime = 4500;
+
+            carousels.forEach(carousel => {
+                const images = carousel.querySelectorAll('img');
+                const nextBtn = carousel.querySelector('.next-btn');
+                const prevBtn = carousel.querySelector('.prev-btn');
+                let currentIndex = 0;
+                let autoCycle;
+
+                // --- Touch Variables ---
+                let touchStartX = 0;
+                let touchEndX = 0;
+                const swipeThreshold = 50; // Pixels required to trigger swipe
+
+                images.forEach((img, index) => {
+                    if (img.classList.contains('opacity-100')) currentIndex = index;
+                });
+
+                function showImage(index) {
+                    images.forEach((img, i) => {
+                        img.classList.toggle('opacity-100', i === index);
+                        img.classList.toggle('opacity-0', i !== index);
+                    });
+                    currentIndex = index;
+                }
+
+                function cycleNext() { showImage((currentIndex + 1) % images.length); }
+                function cyclePrev() { showImage((currentIndex - 1 + images.length) % images.length); }
+
+                function startTimer() { autoCycle = setInterval(cycleNext, intervalTime); }
+                function resetTimer() { clearInterval(autoCycle); startTimer(); }
+
+                // --- Click Events ---
+                if (nextBtn) nextBtn.addEventListener('click', (e) => { e.preventDefault(); cycleNext(); resetTimer(); });
+                if (prevBtn) prevBtn.addEventListener('click', (e) => { e.preventDefault(); cyclePrev(); resetTimer(); });
+
+                // --- Touch/Swipe Events ---
+                carousel.addEventListener('touchstart', (e) => {
+                    touchStartX = e.changedTouches[0].screenX;
+                }, { passive: true });
+
+                carousel.addEventListener('touchend', (e) => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    handleSwipe();
+                }, { passive: true });
+
+                function handleSwipe() {
+                    const swipeDistance = touchStartX - touchEndX;
+
+                    // Swiped Left -> Go Next
+                    if (swipeDistance > swipeThreshold) {
+                        cycleNext();
+                        resetTimer();
+                    }
+                    // Swiped Right -> Go Prev
+                    else if (swipeDistance < -swipeThreshold) {
+                        cyclePrev();
+                        resetTimer();
+                    }
+                }
+
+                if (images.length > 1) startTimer();
+            });
+
+            // =======================================================
+            // 3. Hero Video Loop & Autoplay Fix
+            // =======================================================
+            const heroVideo = document.getElementById('smoketwo-video');
+            if (heroVideo) {
+                // Manual loop fallback
+                heroVideo.addEventListener('ended', function () {
+                    heroVideo.currentTime = 0;
+                    heroVideo.play();
+                }, false);
+
+                // Attempt to play immediately (handles browser autoplay blocks)
+                const playPromise = heroVideo.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(() => {
+                        // If blocked, try to play again on first user interaction
+                        document.addEventListener('click', () => {
+                            heroVideo.play();
+                        }, { once: true });
+                    });
+                }
+            }
+        });
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

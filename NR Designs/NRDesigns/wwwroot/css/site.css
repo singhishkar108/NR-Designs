@@ -1,0 +1,184 @@
+/*
+ * Custom Styling based on Styling sheet.txt for NR DESIGNS Dark Blue Theme
+ * Tailwind is loaded via CDN in _Layout.cshtml. This file contains custom CSS rules.
+ */
+
+/* =======================================================
+   GLOBAL PAGE SCALE (90% Zoom Effect)
+   ======================================================= */
+/*
+html { 
+    scroll-behavior: smooth; 
+    zoom: 0.9; 
+    background-color: #050D17;
+}
+*/
+
+/* Firefox fallback for scaling */
+/*
+@-moz-document url-prefix() {
+    body {
+        transform: scale(0.9);
+        transform-origin: top center;
+        width: 111.11%; 
+        margin-left: -5.55%;
+    }
+}
+*/
+
+/* This mimics the 75% browser zoom by shrinking the base unit.
+   Default browser size is 16px. 
+   16px * 0.75 = 12px.
+*/
+html {
+    font-size: 95%; /* This is the "Magic" line */
+    zoom: 0.85;
+    scroll-behavior: smooth;
+    background-color: #050D17;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-dark-bg);
+    /* Ensure body stays full width without the Firefox transform glitches */
+    color: var(--color-neutral-text);
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+
+/* Custom Tailwind Configuration & Variables for Deep Dark Blue Theme */
+:root {
+    --color-dark-bg:#050D17; --color-dark-surface:#0B1A2C; --color-blue-accent:#50C4F6;
+    --color-blue-hover:#90E0FF; --color-neutral-text:#E0F4FF; --color-subtle-text:#AAB9CC;
+    --font-body:'Open Sans',sans-serif;
+}
+
+html { scroll-behavior:smooth; }
+
+body {
+    font-family:var(--font-body); background-color:var(--color-dark-bg);
+    color:var(--color-neutral-text); overflow-x:hidden; margin-bottom:0;
+}
+
+/* Custom Blue Accent Text Utility */
+.text-blue-accent { color:var(--color-blue-accent); }
+.hover\:text-blue-hover:hover { color:var(--color-blue-hover); }
+
+.text-glow {
+    text-shadow:
+        0 0 5px rgba(80,196,246,.5),
+        0 0 10px rgba(80,196,246,.4),
+        0 0 20px rgba(80,196,246,.3);
+}
+
+.mobile-link {
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+/* Ensure the hamburger button doesn't look squashed at 75% scale */
+#menu-btn {
+    min-height: 20px;
+    min-width: 24px;
+}
+
+/* Custom Button Style */
+.btn-blue {
+    background-color:transparent; border:1px solid var(--color-blue-accent);
+    color:var(--color-blue-accent);
+    transition:all .3s cubic-bezier(.25,.46,.45,.94);
+}
+.btn-blue:hover {
+    background-color:rgba(80,196,246,.1); color:var(--color-blue-hover);
+    box-shadow:0 4px 15px rgba(80,196,246,.3);
+}
+
+/* Custom Logo Glow for Images */
+.logo-glow {
+    filter: drop-shadow(0 0 5px rgba(80, 196, 246, 0.6)) 
+            drop-shadow(0 0 12px rgba(80, 196, 246, 0.4));
+    transition: filter 0.3s ease;
+}
+
+.logo-glow:hover {
+    filter: drop-shadow(0 0 8px rgba(80, 196, 246, 0.8)) 
+            drop-shadow(0 0 15px rgba(80, 196, 246, 0.5));
+}
+
+/* Custom Project Card */
+.project-card {
+    background-color:var(--color-dark-surface);
+    transition:transform .4s ease-in-out,box-shadow .4s ease-in-out;
+    cursor:pointer; border:1px solid #1A2E44;
+}
+.project-card:hover {
+    transform:translateY(-5px) scale(1.02);
+    box-shadow:0 10px 30px rgba(0,0,0,.5),0 0 15px var(--color-blue-accent);
+}
+.project-image { filter:grayscale(100%) brightness(70%); transition:filter .5s ease; }
+.project-card:hover .project-image { filter:grayscale(0%) brightness(100%); }
+
+/* --- Floating WhatsApp Button Styling --- */
+#whatsapp-float {
+    position:fixed; bottom:40px; right:40px; z-index:1000;
+    display:flex; align-items:center; justify-content:center;
+    width:90px; height:90px; border-radius:50%; cursor:pointer;
+    transition:all .5s cubic-bezier(.68,-.55,.265,1.55);
+    overflow:hidden; text-decoration:none;
+    background-color:var(--color-dark-surface,#0B1A2C);
+    border:2px solid #50F650;
+    animation:pulse-glow 2s infinite ease-in-out;
+}
+
+#whatsapp-float:hover {
+    width:280px; border-radius:45px; justify-content:space-between;
+    box-shadow:0 0 10px 4px rgba(80,246,80,.6); animation:none;
+}
+
+/* Keyframes for the pulsing glow effect */
+@keyframes pulse-glow {
+    0% { box-shadow:0 0 0 0 rgba(80,246,80,.7); }
+    70% { box-shadow:0 0 10px 10px rgba(80,246,80,0); }
+    100% { box-shadow:0 0 0 0 rgba(80,246,80,0); }
+}
+
+/* Style for the GLOW CONTAINER */
+.whatsapp-glow {
+    display:flex; align-items:center; justify-content:center;
+    width:90px; height:100%; flex-shrink:0;
+    position:relative; background:transparent; border:none; padding:0;
+}
+
+/* SVG ICON Styling */
+.whatsapp-icon {
+    width:45px; height:45px; fill:#50F650;
+    position:relative; z-index:2;
+    transition:all .5s ease-in-out;
+}
+
+#whatsapp-float:hover .whatsapp-glow { order:2; margin-right:0; }
+
+/* Styling for the text container */
+.whatsapp-text-content {
+    position:absolute; top:50%; left:0; transform:translateY(-50%);
+    display:flex; flex-direction:column; justify-content:center; align-items:flex-start;
+    margin-left:25px; opacity:0; transition:opacity 0.s ease .35s;
+    flex-grow:1; order:1; width:0; pointer-events:none;
+}
+
+#whatsapp-float:hover .whatsapp-text-content {
+    opacity:1; pointer-events:auto; width:auto;
+    position:relative; transform:none; top:auto; left:auto;
+}
+
+.whatsapp-text-small {
+    font-size:.8rem; color:var(--color-neutral-text,#E0F4FF);
+    text-transform:uppercase; letter-spacing:.1em; font-weight:500;
+}
+
+.whatsapp-text-large {
+    font-size:1.2rem; color:var(--color-neutral-text,#E0F4FF);
+    font-weight:700; margin-top:2px;
+}
