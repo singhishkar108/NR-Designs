@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>🎨 NR Designs: Creative Design Studio - Portfolio website 🌐</h1>
+<h1>🎨 NR Designs: Design Studio - Portfolio website 🌐</h1>
 
 </div>
 
