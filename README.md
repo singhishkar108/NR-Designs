@@ -8,14 +8,35 @@
 
 ## 📑Table of Contents
 
-🛠️ 1. [**Setting Up the Project Locally**](#️-2-setting-up-the-project-locally)<br>
-🏗️ 2. [**Architecture**](#️-6-architecture)<br>
-👥 3. [**Author and Contributions**](#-7-author-and-contributions)<br>
-⚖️ 4. [**MIT License**](#️-8-mit-license)<br>
+🧭 1. [**Introduction**](#-1-introduction)<br>
+🛠️ 2. [**Setting Up the Project Locally**](#️-2-setting-up-the-project-locally)<br>
+🏗️ 3. [**Architecture**](#️-6-architecture)<br>
+👥 4. [**Author and Contributions**](#-7-author-and-contributions)<br>
+⚖️ 5. [**MIT License**](#️-8-mit-license)<br>
 
 ---
 
-## 🛠️ 1. Setting Up the Project Locally
+## 🧭 1. Introduction
+
+## NR Designs Creative Studio 🎨
+
+This application serves as a digital home for **NR Designs**, a **Durban-based creative studio**. The studio specializes in innovative **graphic design**, ranging from television prop design for major South African shows to corporate branding and digital media. The website is architected as a **static single-page application (SPA)** within the **MVC framework**, leveraging **anchor links** for seamless section transitions and a focused user experience.
+
+### Key Features:
+
+- **Anchor Links**: Implements a smooth-scroll navigation system that maps the header menu to specific `id` attributes on the single `.cshtml` page, ensuring users can navigate from "Introduction" to "Services" without page reloads.
+- **Card Animations**: Utilizes CSS3 transitions and transforms to create a dynamic gallery; hovering over design pieces triggers scale increases and box-shadow glows for a premium feel.
+- **Seamless Image Transitions**: Employs JavaScript or CSS-based sliders within individual project cards, allowing visitors to cycle through various works without leaving the current view.
+- **Whatsapp Redirect**: Integrates a direct communication link using the studio's contact number via the WhatsApp icon in the bottom right (API), enabling potential clients to initiate a chat instantly from the browser.
+- **Brevo Email API (SMTP)**: Configures an SMTP relay or API integration using Brevo (formerly Sendinblue) to handle the contact form, allowing users to send inquiries directly to NR Designs securely.
+- **Google Maps Embedded Link**: Features an embedded map component pinpointing NR Designs' location in Durban, optimized for performance by using a static map image or cached iframe to reduce load times.
+- **Product and Services showcase**: A comprehensive, categorized display of the studio's diverse offerings, including Prop Design, Business Branding, and Social Media Marketing, structured to mirror the professional flow of the 2025 portfolio.
+
+---
+
+## 🛠️ 2. Setting Up the Project Locally
+
+> ⚠️ **Note**: Application still in development
 
 ### Prerequisites:
 
@@ -159,7 +180,7 @@ dotnet run
 
 ---
 
-## 🏗️ 2. Architecture
+## 🏗️ 3. Architecture
 
 ### Application Structure (ASP.NET Core MVC)
 
@@ -171,7 +192,7 @@ The application code adheres to the **MVC pattern**, which ensures a clear separ
 
 ---
 
-## 👥 3. Author and Contributions
+## 👥 4. Author and Contributions
 
 ### Primary Developer:
 
@@ -196,7 +217,7 @@ The application code adheres to the **MVC pattern**, which ensures a clear separ
 
 ---
 
-## ⚖️ 4. MIT License
+## ⚖️ 5. MIT License
 
 **Copyright © 2026 Ishkar Singh**<br>
 
