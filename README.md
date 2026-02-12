@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>🎨 NR Designs - Portfolio website 🌐</h1>
+<h1>🎨 NR Designs: Creative Design Studio - Portfolio website 🌐</h1>
 
 </div>
 
@@ -10,15 +10,13 @@
 
 🧭 1. [**Introduction**](#-1-introduction)<br>
 🛠️ 2. [**Setting Up the Project Locally**](#️-2-setting-up-the-project-locally)<br>
-🏗️ 3. [**Architecture**](#️-6-architecture)<br>
-👥 4. [**Author and Contributions**](#-7-author-and-contributions)<br>
-⚖️ 5. [**MIT License**](#️-8-mit-license)<br>
+🏗️ 3. [**Architecture**](#️-3-architecture)<br>
+👥 4. [**Author and Contributions**](#-4-author-and-contributions)<br>
+⚖️ 5. [**MIT License**](#️-5-mit-license)<br>
 
 ---
 
 ## 🧭 1. Introduction
-
-## NR Designs Creative Studio 🎨
 
 This application serves as a digital home for **NR Designs**, a **Durban-based creative studio**. The studio specializes in innovative **graphic design**, ranging from television prop design for major South African shows to corporate branding and digital media. The website is architected as a **static single-page application (SPA)** within the **MVC framework**, leveraging **anchor links** for seamless section transitions and a focused user experience.
 
